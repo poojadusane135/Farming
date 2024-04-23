@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 0px;
+            text-align: center;
+            padding-top: 0px; /* Reduced gap */
+            font-size: 40px;
+            color: #285429; /* Dark Green */
+            margin-bottom: 0px; /* Reduced gap */
+        }
+        
+
+        h2 {
+            text-align: center;
+            padding-top: 50px; /* Reduced gap */
+            color: #FAA625; /* Dark Green */
+            margin-top: 0; /* Remove default margin */
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 50px;
+        }
+
+        .user-inputs {
+            margin-top: 30px;
+            max-width: 400px; /* Reduced width */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+        }
+
+        th, td {
+            padding: 14px; /* Increased padding for row height */
+            text-align: left;
+            border-bottom: 1px solid #CCCCCC; /* Border color */
+        }
+
+        th {
+            background-color: #285429; /* Dark Green */
+            color: #FFFFFF; /* White text */
+        }
+
+        tr:last-child td {
+            border-bottom: none; /* Remove border for last row */
+        }
+
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>YOUR IDEAL MATCH</h2>
+    <h1>{{ label }}</h1>
+    <div class="user-inputs">
+        <table>
+            <tr>
+                <th>Soil contents</th>
+                <th>Values</th>
+            </tr>
+            <tr>
+                <td class="label">Nitrogen</td>
+                <td>{{ N }}</td>
+            </tr>
+            <tr>
+                <td class="label">Phosphorous</td>
+                <td>{{ P }}</td>
+            </tr>
+            <tr>
+                <td class="label">Potassium</td>
+                <td>{{ K }}</td>
+            </tr>
+            <tr>
+                <td class="label">Temperature</td>
+                <td>{{ temperature }}</td>
+            </tr>
+            <tr>
+                <td class="label">Humidity</td>
+                <td>{{ humidity }}</td>
+            </tr>
+            <tr>
+                <td class="label">pH</td>
+                <td>{{ ph }}</td>
+            </tr>
+            <tr>
+                <td class="label">Rainfall</td>
+                <td>{{ rainfall }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
